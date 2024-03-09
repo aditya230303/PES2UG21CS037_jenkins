@@ -5,13 +5,13 @@ pipeline {
             steps {
                 checkout([$class: 'GitSCM',
                     branches: [[name: '*/main']],
-                    userRemoteConfigs: [[url: 'https://github.com/Jatinsharma591/Jenkins-git']]]
+                    userRemoteConfigs: [[url: 'https://github.com/PES2UG21CS037_jenkins/Jenkins-git']]]
             }
         }
         stage('Build') {
             steps {
                 script {
-                    def buildId = 'PESU2IGC19S59-1'
+                    def buildId = 'PESU2UG21CS037-1'
                     echo "Building project with ID: ${buildId}"
                     sh "g++ main.cpp -o output"
                 }
